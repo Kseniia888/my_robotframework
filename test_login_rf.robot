@@ -36,7 +36,7 @@ Type in password
 Click on the Submit button
         Click Button    ${SINGINBUTTON}
 Assert dashboared
-        Wait Until Element Is Visible    ${PAGELOGO}
+        Wait Until Element Is Visible        ${PAGELOGO}
         Title Should Be          Scouts panel
         Capture Page Screenshot          alert.png
 

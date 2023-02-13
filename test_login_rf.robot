@@ -40,3 +40,4 @@ Assert dashboared
         Title Should Be          Scouts panel
         Capture Page Screenshot          alert.png
 
+

@@ -61,4 +61,3 @@ Click on the Submit button 1
         Click Button    ${ADDAPLAYERBUTTON}
         Sleep       5
         Capture Page Screenshot          alert.png
-

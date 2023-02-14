@@ -11,23 +11,27 @@ ${SINGINBUTTON}         xpath = //button[@tabindex='0']
 ${EMAILINPUT}       xpath = //*[@id='login']
 ${PASSWORDINPUT}        xpath = //*[@id='password']
 ${PAGELOGO}         xpath = //header/div/h6
-
+${ADDPLAYERBUTTON}      xpath = //span[contains(text(),'Add player')]
+${NAME}      xpath = //input[@name = 'name']
+${SURENAME}      xpath = //input[@name = 'surname']
+${AGE}      xpath = //input[@name = 'name']
+${MAINPOSITION}      xpath = //input[@name = 'mainPosition']
+${ADDAPLAYERBUTTON}         xpath = //button[@type = 'submit']
 
 
 *** Test Cases ***
 
-Adding player to the data base
+Add a player button
     Open login page
     Type in email
     Type in password
     Click on the Submit button
     Assert dashboared
     [Timeout]
-
-
-
-
-
+    Click on the Add a player button
+    Fill in inputs
+    [Timeout]
+    Click on the Submit button 1
     [Teardown]  Close Browser
 
 *** Keywords ***
@@ -44,6 +48,16 @@ Click on the Submit button
 Assert dashboared
         Wait Until Element Is Visible        ${PAGELOGO}
         Title Should Be          Scouts panel
-        Capture Page Screenshot          alert.png
+Click on the Add a player button
+        Click Element       ${ADDPLAYERBUTTON}
+        Title Should Be     Add player
 
+Fill in inputs
+        Input Text      ${NAME}     TestName
+        Input Text      ${SURENAME}     TestSurename
+        Input Text      ${AGE}     15.12.1989
+        Input Text      ${MAINPOSITION}         Some
+Click on the Submit button 1
+        Click Button    ${ADDAPLAYERBUTTON}
+        Capture Page Screenshot          alert.png
 

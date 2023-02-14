@@ -1,7 +1,6 @@
 *** Settings ***
 
 Library  SeleniumLibrary
-Library     Log in to the system
 Documentation    Suite description #automated tests for scout website
 
 

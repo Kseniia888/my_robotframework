@@ -59,6 +59,6 @@ Fill in inputs
         Input Text      ${MAINPOSITION}         Some
 Click on the Submit button 1
         Click Button    ${ADDAPLAYERBUTTON}
-        Sleep       3
+        Sleep       5
         Capture Page Screenshot          alert.png
 

@@ -14,7 +14,7 @@ ${PAGELOGO}         xpath = //header/div/h6
 ${ADDPLAYERBUTTON}      xpath = //span[contains(text(),'Add player')]
 ${NAME}      xpath = //input[@name = 'name']
 ${SURENAME}      xpath = //input[@name = 'surname']
-${AGE}      xpath = //input[@name = 'name']
+${AGE}      xpath = //input[@type = 'date']
 ${MAINPOSITION}      xpath = //input[@name = 'mainPosition']
 ${ADDAPLAYERBUTTON}         xpath = //button[@type = 'submit']
 
@@ -30,7 +30,6 @@ Add a player button
     [Timeout]
     Click on the Add a player button
     Fill in inputs
-    [Timeout]
     Click on the Submit button 1
     [Teardown]  Close Browser
 
@@ -50,6 +49,7 @@ Assert dashboared
         Title Should Be          Scouts panel
 Click on the Add a player button
         Click Element       ${ADDPLAYERBUTTON}
+        Sleep       3
         Title Should Be     Add player
 
 Fill in inputs
@@ -59,5 +59,6 @@ Fill in inputs
         Input Text      ${MAINPOSITION}         Some
 Click on the Submit button 1
         Click Button    ${ADDAPLAYERBUTTON}
+        Sleep       3
         Capture Page Screenshot          alert.png
 

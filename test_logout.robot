@@ -25,7 +25,7 @@ Log out to the system
     Type in password
     Click on the Submit button
     Assert dashboared
-    [Timeout]    3s
+    [Timeout]
     Click on the SingOut button
     Assert login page
     [Teardown]  Close Browser
@@ -46,7 +46,7 @@ Assert dashboared
         Title Should Be          Scouts panel
         Capture Page Screenshot          alert.png
 Click on the SingOut button
-        Click Button        ${SINGOUTBUTTON}
+        Click Element       ${SINGOUTBUTTON}
 Assert login page
         Wait Until Element Is Visible        ${PANELLOGO}
         Title Should Be     Scouts panel - sign in

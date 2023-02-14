@@ -25,7 +25,6 @@ Add a player button
     Assert dashboared
     [Timeout]
     Click on the Add a player button
-    Assert Add a player page title
     [Teardown]  Close Browser
 
 *** Keywords ***

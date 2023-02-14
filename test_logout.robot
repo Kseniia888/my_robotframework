@@ -2,7 +2,8 @@
 
 Library  SeleniumLibrary
 Documentation    Suite description #automated tests for scout website
-
+Library  SeleniumLibrary
+Documentation    Suite description #automated tests for scout website
 
 *** Variables ***
 

@@ -2,7 +2,7 @@
 
 Library  SeleniumLibrary
 Documentation    Suite description #automated tests for scout website
-Resource        ../Resources/resource.robot
+Resource        Resources/resource.robot
 
 
 

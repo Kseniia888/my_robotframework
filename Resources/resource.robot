@@ -10,6 +10,8 @@ ${SINGINBUTTON}         xpath = //button[@tabindex='0']
 ${EMAILINPUT}       xpath = //*[@id='login']
 ${PASSWORDINPUT}        xpath = //*[@id='password']
 ${PAGELOGO}         xpath = //header/div/h6
+${SINGOUTBUTTON}        xpath = //span[text()='Sign out']
+${PANELLOGO}        xpath =//div[1]/h5
 
 
 
@@ -27,4 +29,10 @@ Click on the Submit button
 Assert dashboared
         Wait Until Element Is Visible        ${PAGELOGO}
         Title Should Be          Scouts panel
+        Capture Page Screenshot          alert.png
+Click on the SingOut button
+        Click Element       ${SINGOUTBUTTON}
+Assert login page
+        Wait Until Element Is Visible        ${PANELLOGO}
+        Title Should Be     Scouts panel - sign in
         Capture Page Screenshot          alert.png

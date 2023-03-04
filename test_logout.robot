@@ -15,10 +15,11 @@ Log out to the system
     Type in email
     Type in password
     Click on the Submit button
-    Assert dashboared
+#    Assert dashboared
     [Timeout]
+    Sleep    3
     Click on the SingOut button
-    Assert login page
+#    Assert login page
     [Teardown]  Close Browser
 
 

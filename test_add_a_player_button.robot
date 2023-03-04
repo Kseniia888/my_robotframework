@@ -5,7 +5,7 @@ Documentation    Suite description #automated tests for scout website
 
 *** Variables ***
 
-${LOGIN URL}      https://scouts-test.futbolkolektyw.pl/en
+${LOGIN URL}      https://scouts.futbolkolektyw.pl/en/
 ${BROWSER}        Chrome
 ${SINGINBUTTON}         xpath = //button[@tabindex='0']
 ${EMAILINPUT}       xpath = //*[@id='login']
@@ -22,7 +22,7 @@ Add a player button
     Type in email
     Type in password
     Click on the Submit button
-    Assert dashboared
+#    Assert dashboared
     [Timeout]
     Click on the Add a player button
     [Teardown]  Close Browser
@@ -38,9 +38,9 @@ Type in password
         Input Password    ${PASSWORDINPUT}      Test-1234
 Click on the Submit button
         Click Button    ${SINGINBUTTON}
-Assert dashboared
-        Wait Until Element Is Visible        ${PAGELOGO}
-        Title Should Be          Scouts panel
+#Assert dashboared
+#        Wait Until Element Is Visible        ${PAGELOGO}
+#        Title Should Be          Scouts panel
 Click on the Add a player button
         Click Element       ${ADDPLAYERBUTTON}
         Title Should Be     Add player

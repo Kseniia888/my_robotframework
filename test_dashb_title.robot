@@ -5,7 +5,7 @@ Documentation    Suite description #automated tests for scout website
 
 *** Variables ***
 
-${LOGIN URL}      https://scouts-test.futbolkolektyw.pl/en
+${LOGIN URL}      https://scouts.futbolkolektyw.pl/en/
 ${BROWSER}        Chrome
 ${SINGINBUTTON}         xpath = //button[@tabindex='0']
 ${EMAILINPUT}       xpath = //*[@id='login']

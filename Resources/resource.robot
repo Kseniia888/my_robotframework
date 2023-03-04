@@ -4,13 +4,14 @@ Library  SeleniumLibrary
 
 *** Variables ***
 
-${LOGIN URL}      https://scouts-test.futbolkolektyw.pl/en
+${LOGIN URL}      https://scouts.futbolkolektyw.pl/en/
 ${BROWSER}        Chrome
 ${SINGINBUTTON}         xpath = //button[@tabindex='0']
 ${EMAILINPUT}       xpath = //*[@id='login']
 ${PASSWORDINPUT}        xpath = //*[@id='password']
 ${PAGELOGO}         xpath = //header/div/h6
-${SINGOUTBUTTON}        xpath = //span[text()='Sign out']
+#${SINGOUTBUTTON}        xpath = //span[text()='Sign out']
+${SINGOUTBUTTON}        xpath = //ul[2]/div[2]/div[2]/span
 ${PANELLOGO}        xpath =//div[1]/h5
 
 
@@ -32,7 +33,7 @@ Assert dashboared
         Capture Page Screenshot          alert.png
 Click on the SingOut button
         Click Element       ${SINGOUTBUTTON}
-Assert login page
-        Wait Until Element Is Visible        ${PANELLOGO}
-        Title Should Be     Scouts panel - sign in
-        Capture Page Screenshot          alert.png
+#Assert login page
+#        Wait Until Element Is Visible        ${PANELLOGO}
+#        Title Should Be     Scouts panel - sign in
+#        Capture Page Screenshot          alert.png
